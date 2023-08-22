@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" 1. Pick your destination · 2. Decide the duration of your trip · 3. Book flights, train, or bus tickets, and accommodation · 4. Plan the day-wise ...">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Baloo+Bhaina+2&family=Bree+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" media="screen and (max-width: 600px)" href="phone.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="download.jpg" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <title>Plan My Trip-Best Oline Trip Planner Service In India| PlanMyTrip.com</title>
+  <style>
+    /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* css variable */
+:root{
+    --navbar-height: 59px
+}
+ /* Navigation Bar */
+
+ 
+ #navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+ }
+
+ /* Navigation Bar: Logo and Image */
+ #logo{
+    margin: 1px 1px;
+
+ }
+
+ #logo img{
+    margin: 1px 1px;
+    height: 100px;
+    cursor: pointer;
+ }
+
+ /* Navigation Bar: List Syling */
+ 
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li{
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 425px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background: url('./Img/trip9.jpg')  no-repeat center center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 88%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#home p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 3px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    background-color: #d4d3d3;
+    margin-bottom: 10px;
+}
+#services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}
+
+/* Client Services */
+#client-section{
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('./img/hotel3.webp');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 150px;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('./img/contact-us.jpg') no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+    
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Class */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn1{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+
+
+
+
+
+
+#Crusol Slider::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 88%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+  </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="download.jpg" width="100px" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#Home">Home</a></li>
+            <li class="item"><a href="#Services-section">Services</a></li>
+            <li class="item"><a href="#Client-section">Our Clients</a></li>
+           <li class="item"><a href="#Contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h1 class="h-primary">Welcome to PlanMyTrip</h1>
+        <p> “Jobs fill your pockets, adventures fill your soul.”</p>
+        <p> “Remember that happiness is a way of travel, not a destination.”</p>
+        <p>“The world is a book and those who do not travel read only one page.”</p>
+        <p>“Travel is the only thing you buy that makes you richer.”</p>
+     </div>
+
+     <!-- Button to open the modal Registeration form -->
+     <button class="btn1" onclick="document.getElementById('raj').style.display='block'">Register</button>
+
+     <!-- The Modal -->
+     <div id="raj" class="modal">
+         <span onclick="document.getElementById('raj').style.display='none'" class="close"
+             title="Close Modal">&times;</span>
+
+         <!-- Modal Content -->
+         <form class="modal-content animate" action="/action_page.php">
+             <div class="imgcontainer">
+                 <img src="trip10.webp" alt="Avatar" class="avatar">
+             </div>
+
+             <div>
+                <img src="download.jpg" alt="">
+                <hr>
+                <div style="width: 500px; margin: auto;">
+                <h2 style="background-color:blue">1.Register Application Online</h2>
+                <hr><br></div>
+                <hr>
+                <h2 style="background-color: blue;">Personal Details</h2>
+                <hr>
+                <h3 style="color:blue">Number of Visa</h3>
+                <select name="Only 1 Applicant" id="Only 1 Applicant">
+                    <option value="Only 1 Applicant">Only 1 Applicant</option>
+                    <option value="Group of 2 Applicants">Group of 2 Applicants</option>
+                    <option value="Group of 3 Appllicats">Group of 3 Appllicats</option>
+                    <option value="Group of 4 Applicants">Group of 4 Applicants</option>
+                    <option value="Group of 5 Applicants">Group of 5 Applicants</option>
+                    <option value="Group of 6 Appllicats">Group of 6 Appllicats</option>
+                    <option value="Group of 7 Applicants">Group of 7 Applicants</option>
+                    <option value="Group of 8 Applicants">Group of 8 Applicants</option>
+                    <option value="Group of 9 Appllicats">Group of 9 Appllicats</option>
+                    <option value="Group of 10 Applicants">Group of 10 Applicants</option>
+                    <option value="Group of 11 Applicants">Group of 11 Applicants</option>
+                    <option value="Group of 12 Appllicats">Group of 12 Appllicats</option>
+                    <option value="Group of 13 Applicants">Group of 13 Applicants</option>
+                    <option value="Group of 14 Appllicats">Group of 14 Appllicats</option>
+                    <option value="Group of 15 Applicants">Group of 15 Applicants</option>
+                </select>
+                <h3 style="color: blue;">Surname</h3>
+                <input type="text" placeholder="Enter Your Surname"><br>
+                <i>i Enter Your Surname exactly as shown in your passport</i>
+                <h3 style="color: blue;">Gender</h3>
+                <label for="Maleid">
+                    <input type="radio" value="Male" name="Gender" id="Maleid">Male
+                </label>
+                <label for="Femaleid">
+                    <input type="radio" value="Female" name="Gender" id="Femaleid">Female
+                </label>
+                <h3 style="color: blue;">Country Of Birth</h3>
+                <select name="[Coutry Of Birth]" id="[Coutry Of Birth]">
+                    <option value="[Country Of Birth]">[Country Of Birth]</option>
+                    <option value="India">India</option>
+                    <option value="Afganistan">Afganistan</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="America">America</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Aaland Island">Aaland Island</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                </select>
+                <h3 style="color: blue;">Martial Status</h3>
+                <select name="Select" id="Select">
+                    <option value="Select">Select</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Windower">Windower</option>
+                    <option value="Divorce">Divorce</option>
+                </select>
+                <h3 style="color: blue;">Intended Arrival Date</h3>
+                <input type="date"><br>
+                <i>i.If Data Of Entry is Unknown, enter estimated Date.</i>
+                <h3 style="color: blue;">First/Given Names</h3>
+                <input type="text"><br>
+                <i>i. Enter your First/Given Name(s) exactly is shown in your passport</i>
+                <h3 style="color: blue;">Date Of Birth</h3>
+                <input type="date">
+                <h3 style="color: blue;">Nationality/Country Of Citizenship</h3>
+                <select name="Select" id="Select">
+                    <option value="Select">Select</option>
+                    <option value="India">India</option>
+                    <option value="Afganistan">Afganistan</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="America">America</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Aaland Island">Aaland Island</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                </select>
+                <h3 style="color: blue;">Employment Status</h3>
+                <select name="select" id="select">
+                    <option value="Select">Select</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Self Employed">Self Employed</option>
+                    <option value="Unemployed">Unemployed</option>
+                </select><br>
+                <h3 style="color: blue;">Travelling Through</h3>
+                <select name="select" id="select">
+                    <option value="Select">Select</option>
+                    <option value="Flight">Flight</option>
+                    <option value="Train">Train</option>
+                    <option value="Bus">Bus</option>
+                </select><br>
+                <h3 style="color: blue;">Visiting Place</h3>
+                <select name="select" id="select">
+                    <option value="Select">Select</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Australia">Australia</option>
+                </select><br>
+                <br>
+                </div>
+                 <button class="btn1">Register</button>
+         </form>
+     </div>
+    </section>
+    <section id="Crusol Slider" >
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Img/trip1.avif" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Img/trip3.jpg" height="560px"  class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Img/trip4.jpg"  height="560px" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Img/trip7.jpg"  height="560px" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Img/trip8.jpg"  height="560px" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Img/trip9.jpg"  height="560px" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Img/trip10.webp"  height="560px" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <h2> <b>Providing You Travelling Through</b></h2>
+        <div id="services">
+            <div class="box">
+                <img src="./img/flight.png" alt="">
+                <h2 class="h-secondary center">Flight</h2>         
+                <p class="center">You can travelling through Flights. As Your Choice.</p>
+            </div>
+            <div class="box">
+                <img src="./Img/train.jpg" alt="">
+                <h2 class="h-secondary center">Train</h2>         
+                <p class="center">You can travelling through Trains. As Your Choice.</p>
+            </div>
+            <div class="box">
+                <img src="./Img/bus.avif" alt="">
+                <h2 class="h-secondary center">Bus</h2>         
+                <p class="center">You can travelling through Buses. As Your Choice.</p>
+            </div>
+        </div>
+    </section>
+    <section id="services-container">
+        <h2> <b>Visiting Places: Out Of India</b></h2>
+        <div id="services">
+            <div class="box">
+                <img src="./img/dubai.jpg" alt="">
+                <h2 class="h-secondary center">Dubai</h2>         
+                <p class="center">You can visiting in out of India like Dubai.</p>
+            </div>
+            <div class="box">
+                <img src="./Img/australia.webp" alt="">
+                <h2 class="h-secondary center">Australia</h2>         
+                <p class="center">You can visiting in out of India like Australia</p>
+            </div>
+            <div class="box">
+                <img src="./Img/russia.avif" alt="">
+                <h2 class="h-secondary center">Russia</h2>         
+                <p class="center">You can visiting in out india like Russia.</p>
+            </div>
+        </div>
+    </section>
+    <section id="services-container">
+        <h2> <b>Visiting Places: In India</b></h2>
+        <div id="services">
+            <div class="box">
+                <img src="./img/bangalore.jpg" alt="">
+                <h2 class="h-secondary center">Bangalore</h2>         
+                <p class="center">You can visiting in india like Bangalore. As Your Choice.</p>
+            </div>
+            <div class="box">
+                <img src="./Img/mumbai.jpg" alt="">
+                <h2 class="h-secondary center">Mumbai</h2>         
+                <p class="center">You can visiting in india like Mumbai. As Your Choice.</p>
+            </div>
+            <div class="box">
+                <img src="./Img/KOLKATA.jpg" alt="">
+                <h2 class="h-secondary center">Kolkata</h2>         
+                <p class="center">You can visiting in india like Kolkata. As Your Choice.</p>
+            </div>
+        </div>
+    </section>
+    <section id="services-container">
+        <h2> <b>For Stay Hotels Provided By Us</b></h2>
+        <div id="services">
+            <div class="box">
+                <img src="./img/hotel1.jpg" alt="">         
+            </div>
+            <div class="box">
+                <img src="./Img/hotel2.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="./Img/hotel3.webp" alt="">
+            </div>
+            <div class="box">
+                <img src="./Img/hotel4.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="services-container">
+        <div id="services">
+            <div class="box">
+                <img src="./img/bedroom5.jpg" alt="">         
+            </div>
+            <div class="box">
+                <img src="./Img/bedroom6.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="./Img/bedroom7.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="./img/apple_logo.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="./img/hplog.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="./img/microsoft_logo_.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="./img/skype logo.png" alt="Our Client">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="Name" id="Name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="E-mail" name="Name" id="E-mail" placeholder="Enter Your E-mail">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="Phone" name="Name" id="Phone" placeholder="Enter Your Phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <button type="button" class="btn btn-outline-success">Submit</button>
+
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.PlanMyTrip.com. All right reserved
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
